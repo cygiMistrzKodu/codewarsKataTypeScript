@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "tsc"
+    "build": "tsc",
+    "testall": "npm run build && npm test"
   },
   "keywords": [],
   "author": "",
