@@ -1,19 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const chai_1 = require("chai");
 const solution_1 = require("../src/solution");
-describe("Tests", () => {
-    it("test", () => {
-        chai_1.assert.strictEqual((0, solution_1.getChar)(55), '7');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(56), '8');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(57), '9');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(58), ':');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(59), ';');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(60), '<');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(61), '=');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(62), '>');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(63), '?');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(64), '@');
-        chai_1.assert.strictEqual((0, solution_1.getChar)(65), 'A');
+const chai_1 = require("chai");
+describe("solution", function () {
+    it("Basic tests", function () {
+        chai_1.assert.notStrictEqual(solution_1.websites.length, 0, 'The array is still empty');
+        chai_1.assert.strictEqual(solution_1.websites.length, 1, 'The array contains too many values');
+        chai_1.assert.strictEqual(solution_1.websites[0], 'codewars', 'The array does not contain the correct value "codewars"');
     });
 });
