@@ -1,4 +1,5 @@
-export function getChar(c: number): string {
-    
-    return String.fromCharCode(c)
-  }
+import { websites } from "./preloaded";
+// add the value "codewars" to the `websites` array
+
+
+export { websites };

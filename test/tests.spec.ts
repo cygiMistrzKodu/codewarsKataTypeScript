@@ -1,18 +1,10 @@
+import { websites } from '../src/solution';
 import { assert } from "chai";
-import { getChar } from "../src/solution";
 
-describe("Tests", () => {
-  it("test", () => {
-    assert.strictEqual(getChar(55), '7');
-    assert.strictEqual(getChar(56), '8');
-    assert.strictEqual(getChar(57), '9');
-    assert.strictEqual(getChar(58), ':');
-    assert.strictEqual(getChar(59), ';');
-    assert.strictEqual(getChar(60), '<');
-    assert.strictEqual(getChar(61), '=');
-    assert.strictEqual(getChar(62), '>');
-    assert.strictEqual(getChar(63), '?');
-    assert.strictEqual(getChar(64), '@');
-    assert.strictEqual(getChar(65), 'A');
+describe("solution", function() {
+  it("Basic tests", function() {
+    assert.notStrictEqual(websites.length, 0, 'The array is still empty');
+    assert.strictEqual(websites.length, 1, 'The array contains too many values');
+    assert.strictEqual(websites[0], 'codewars', 'The array does not contain the correct value "codewars"');
   });
 });
