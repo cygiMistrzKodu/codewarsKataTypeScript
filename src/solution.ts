@@ -1,6 +1,5 @@
-export function dutyFree(normPrice: number, discount: number, hol: number): number {
-
-  const poudsPerBottleSave = (discount / 100) * normPrice
-
-  return Math.floor(hol / poudsPerBottleSave)
+export function gooseFilter (birds: string[]): string[] {
+  const geese: string[] = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  // return an array containing all of the strings in the input array except those that match strings in geese
+  return []
 }

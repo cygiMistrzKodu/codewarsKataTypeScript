@@ -1,13 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const gooseFilter = require('../src/solution').gooseFilter;
 const chai_1 = require("chai");
-const solution_1 = require("../src/solution");
-describe("Holiday VIII - Duty Free", () => {
-    it("Fixed tests", () => {
-        chai_1.assert.strictEqual((0, solution_1.dutyFree)(12, 50, 1000), 166);
-        chai_1.assert.strictEqual((0, solution_1.dutyFree)(17, 10, 500), 294);
-        chai_1.assert.strictEqual((0, solution_1.dutyFree)(24, 35, 3000), 357);
-        chai_1.assert.strictEqual((0, solution_1.dutyFree)(1400, 35, 10000), 20);
-        chai_1.assert.strictEqual((0, solution_1.dutyFree)(700, 26, 7000), 38);
+describe("Basic tests", function () {
+    it("Mixed list", function () {
+        chai_1.assert.deepEqual(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]), ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]);
+    });
+    it("No geese", function () {
+        chai_1.assert.deepEqual(gooseFilter(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]), ["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]);
+    });
+    it("All geese", function () {
+        chai_1.assert.deepEqual(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]), []);
     });
 });

@@ -1,13 +1,14 @@
+const gooseFilter = require('../src/solution').gooseFilter;
 import { assert } from "chai";
 
-import { dutyFree } from "../src/solution";
-
-describe("Holiday VIII - Duty Free", () => {
-  it("Fixed tests", () => {
-    assert.strictEqual(dutyFree(12, 50, 1000), 166);
-    assert.strictEqual(dutyFree(17, 10, 500), 294);
-    assert.strictEqual(dutyFree(24, 35, 3000), 357);
-    assert.strictEqual(dutyFree(1400, 35, 10000), 20);
-    assert.strictEqual(dutyFree(700, 26, 7000), 38);
+describe("Basic tests",function(){
+  it("Mixed list",function(){
+    assert.deepEqual(gooseFilter(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]),["Mallard", "Hook Bill", "Crested", "Blue Swedish"]);
+  });
+  it("No geese",function(){
+    assert.deepEqual(gooseFilter(["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]),["Mallard", "Barbary", "Hook Bill", "Blue Swedish", "Crested"]);
+  });
+  it("All geese",function(){
+    assert.deepEqual(gooseFilter(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]),[]);
   });
 });
