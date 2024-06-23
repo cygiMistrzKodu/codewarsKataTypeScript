@@ -1,5 +1,3 @@
-import { websites } from "./preloaded";
-websites.push('codewars')
-
-
-export { websites };
+export function dutyFree(normPrice: number, discount: number, hol: number): number{
+  return 0
+}

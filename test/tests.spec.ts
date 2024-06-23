@@ -1,10 +1,13 @@
-import { websites } from '../src/solution';
 import { assert } from "chai";
 
-describe("solution", function() {
-  it("Basic tests", function() {
-    assert.notStrictEqual(websites.length, 0, 'The array is still empty');
-    assert.strictEqual(websites.length, 1, 'The array contains too many values');
-    assert.strictEqual(websites[0], 'codewars', 'The array does not contain the correct value "codewars"');
+import { dutyFree } from "../src/solution";
+
+describe("Holiday VIII - Duty Free", () => {
+  it("Fixed tests", () => {
+    assert.strictEqual(dutyFree(12, 50, 1000), 166);
+    assert.strictEqual(dutyFree(17, 10, 500), 294);
+    assert.strictEqual(dutyFree(24, 35, 3000), 357);
+    assert.strictEqual(dutyFree(1400, 35, 10000), 20);
+    assert.strictEqual(dutyFree(700, 26, 7000), 38);
   });
 });
