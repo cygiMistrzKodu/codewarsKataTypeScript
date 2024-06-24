@@ -1,13 +1,19 @@
-import { remove } from "../src/solution";
 import { assert } from "chai";
 
-describe("Basic Tests", function(){
-  it("It should works for basic tests", function(){
-    assert.strictEqual(remove("Hi!") , "Hi");
-    assert.strictEqual(remove("Hi!!!") ,"Hi!!");
-    assert.strictEqual(remove("!Hi") , "!Hi");
-    assert.strictEqual(remove("!Hi!") , "!Hi");
-    assert.strictEqual(remove("Hi! Hi!") , "Hi! Hi");
-    assert.strictEqual(remove("Hi") , "Hi");
+import { humanYearsCatYearsDogYears } from "../src/solution";
+
+describe("Example Tests", function() {
+
+  it("one", function() {
+    assert.deepEqual(humanYearsCatYearsDogYears(1), [1,15,15]);
   });
+
+  it("two", function() {
+    assert.deepEqual(humanYearsCatYearsDogYears(2), [2,24,24]);
+  });
+
+  it("ten", function() {
+    assert.deepEqual(humanYearsCatYearsDogYears(10), [10,56,64]);
+  });
+
 });
