@@ -3,7 +3,6 @@ import { assert } from "chai";
 import { humanYearsCatYearsDogYears } from "../src/solution";
 
 describe("Example Tests", function() {
-
   it("one", function() {
     assert.deepEqual(humanYearsCatYearsDogYears(1), [1,15,15]);
   });
