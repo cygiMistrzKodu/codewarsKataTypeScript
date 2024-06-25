@@ -1,3 +1,3 @@
-export const getEvenNumbers = (numbersArray: number[]): number[] => {
-  return numbersArray.filter(number => number % 2 == 0)
+export const nbYear = (p0:number, percent:number, aug:number, p:number): number => {
+  // your code
 }

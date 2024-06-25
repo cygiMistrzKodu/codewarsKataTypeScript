@@ -1,15 +1,15 @@
-import { assert, config } from "chai";
+import {nbYear} from '../src/solution'
+import {assert} from "chai";
 
-import { getEvenNumbers } from "../src/solution";
+function testing(p0:number, percent:number, aug:number, p:number, expected:number) {
+    assert.strictEqual(nbYear(p0, percent, aug, p), expected);
+}
 
-config.truncateThreshold = 0
-
-describe("Fixed tests", function() {
-  it("should return an empty array if there are no even numbers", function() {
-      assert.deepEqual(getEvenNumbers([1,2,3,6,8,10]), [2,6,8,10])
-      assert.deepEqual(getEvenNumbers([1,2]), [2])
-      assert.deepEqual(getEvenNumbers([12,14,15]), [12,14])
-      assert.deepEqual(getEvenNumbers([13,15]), [])
-      assert.deepEqual(getEvenNumbers([1,3,9]), [])
-  });
+describe("Fixed Tests", function() {
+    it("Basic tests nbYear", function() {
+        testing(1500, 5, 100, 5000, 15);
+        testing(1500000, 2.5, 10000, 2000000, 10);
+        testing(1500000, 0.25, 1000, 2000000, 94);
+        testing(1500000, 0.25, -1000, 2000000, 151);
+    });
 });
