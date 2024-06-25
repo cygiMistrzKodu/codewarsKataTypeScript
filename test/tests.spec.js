@@ -2,14 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const chai_1 = require("chai");
 const solution_1 = require("../src/solution");
-describe("Example Tests", function () {
-    it("one", function () {
-        chai_1.assert.deepEqual((0, solution_1.humanYearsCatYearsDogYears)(1), [1, 15, 15]);
-    });
-    it("two", function () {
-        chai_1.assert.deepEqual((0, solution_1.humanYearsCatYearsDogYears)(2), [2, 24, 24]);
-    });
-    it("ten", function () {
-        chai_1.assert.deepEqual((0, solution_1.humanYearsCatYearsDogYears)(10), [10, 56, 64]);
+chai_1.config.truncateThreshold = 0;
+describe("Fixed tests", function () {
+    it("should return an empty array if there are no even numbers", function () {
+        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 2, 3, 6, 8, 10]), [2, 6, 8, 10]);
+        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 2]), [2]);
+        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([12, 14, 15]), [12, 14]);
+        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([13, 15]), []);
+        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 3, 9]), []);
     });
 });
