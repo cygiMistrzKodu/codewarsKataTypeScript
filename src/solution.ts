@@ -1,4 +1,3 @@
-export function binaryArrayToNumber(arr: number[]): number {
-
-  return parseInt(arr.join(''), 2);
-};
+export function multiTable(number:number):string {
+  return '' // good luck
+}
