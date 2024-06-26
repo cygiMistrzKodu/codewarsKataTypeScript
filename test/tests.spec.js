@@ -1,14 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const chai_1 = require("chai");
 const solution_1 = require("../src/solution");
-chai_1.config.truncateThreshold = 0;
-describe("Fixed tests", function () {
-    it("should return an empty array if there are no even numbers", function () {
-        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 2, 3, 6, 8, 10]), [2, 6, 8, 10]);
-        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 2]), [2]);
-        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([12, 14, 15]), [12, 14]);
-        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([13, 15]), []);
-        chai_1.assert.deepEqual((0, solution_1.getEvenNumbers)([1, 3, 9]), []);
+const chai_1 = require("chai");
+function testing(p0, percent, aug, p, expected) {
+    chai_1.assert.strictEqual((0, solution_1.nbYear)(p0, percent, aug, p), expected);
+}
+describe("Fixed Tests", function () {
+    it("Basic tests nbYear", function () {
+        testing(1500, 5, 100, 5000, 15);
+        testing(1500000, 2.5, 10000, 2000000, 10);
+        testing(1500000, 0.25, 1000, 2000000, 94);
+        testing(1500000, 0.25, -1000, 2000000, 151);
+        testing(1500000, 0.25, -1000, 2000000, 151);
+        testing(1000, 2, 50, 1214, 4);
+        testing(1500000, 0, 10000, 2000000, 50);
     });
 });
