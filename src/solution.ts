@@ -1,3 +1,4 @@
-export function binaryArrayToNumber(arr: number[]): number{
-  return 0
+export function binaryArrayToNumber(arr: number[]): number {
+
+  return parseInt(arr.join(''), 2);
 };

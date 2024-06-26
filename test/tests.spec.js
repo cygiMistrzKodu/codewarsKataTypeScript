@@ -1,17 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const solution_1 = require("../src/solution");
 const chai_1 = require("chai");
-describe("Fixed Tests", function () {
-    it("Basic tests mxdiflg", function () {
-        let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
-        let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
-        chai_1.assert.equal((0, solution_1.mxdiflg)(s1, s2), 13);
-        s1 = ["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"];
-        s2 = ["bbbaaayddqbbrrrv"];
-        chai_1.assert.equal((0, solution_1.mxdiflg)(s1, s2), 10);
-        s2 = [];
-        s1 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
-        chai_1.assert.equal((0, solution_1.mxdiflg)(s1, s2), -1);
+const solution_1 = require("../src/solution");
+describe("One's and Zero's", () => {
+    it("Example tests", () => {
+        chai_1.assert.strictEqual((0, solution_1.binaryArrayToNumber)([0, 0, 0, 1]), 1);
+        chai_1.assert.strictEqual((0, solution_1.binaryArrayToNumber)([0, 0, 1, 0]), 2);
+        chai_1.assert.strictEqual((0, solution_1.binaryArrayToNumber)([1, 1, 1, 1]), 15);
+        chai_1.assert.strictEqual((0, solution_1.binaryArrayToNumber)([0, 1, 1, 0]), 6);
     });
 });
