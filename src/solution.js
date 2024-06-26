@@ -1,16 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.nbYear = void 0;
-const nbYear = (p0, percent, aug, p) => {
-    let populationState = p0;
-    const growthEachYear = percent / 100;
-    const commingOrLeavingFactor = aug;
-    const expectedState = p;
-    let years = 0;
-    while (expectedState > populationState) {
-        populationState += Math.floor(populationState * growthEachYear + commingOrLeavingFactor);
-        years++;
+exports.factorial = void 0;
+function factorial(n) {
+    if (n == 0 || n == 1) {
+        return 1;
     }
-    return years;
-};
-exports.nbYear = nbYear;
+    let factorial = 1;
+    for (let i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+exports.factorial = factorial;

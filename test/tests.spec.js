@@ -1,18 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const solution_1 = require("../src/solution");
 const chai_1 = require("chai");
-function testing(p0, percent, aug, p, expected) {
-    chai_1.assert.strictEqual((0, solution_1.nbYear)(p0, percent, aug, p), expected);
-}
-describe("Fixed Tests", function () {
-    it("Basic tests nbYear", function () {
-        testing(1500, 5, 100, 5000, 15);
-        testing(1500000, 2.5, 10000, 2000000, 10);
-        testing(1500000, 0.25, 1000, 2000000, 94);
-        testing(1500000, 0.25, -1000, 2000000, 151);
-        testing(1500000, 0.25, -1000, 2000000, 151);
-        testing(1000, 2, 50, 1214, 4);
-        testing(1500000, 0, 10000, 2000000, 50);
-    });
+const solution_1 = require("../src/solution");
+describe("Basic tests", () => {
+    it("Testing for 0", () => chai_1.assert.strictEqual((0, solution_1.factorial)(0), 1));
+    it("Testing for 1", () => chai_1.assert.strictEqual((0, solution_1.factorial)(1), 1));
+    it("Testing for 4", () => chai_1.assert.strictEqual((0, solution_1.factorial)(4), 24));
+    it("Testing for 7", () => chai_1.assert.strictEqual((0, solution_1.factorial)(7), 5040));
+    it("Testing for 17", () => chai_1.assert.strictEqual((0, solution_1.factorial)(17), 355687428096000));
 });

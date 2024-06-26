@@ -1,3 +1,11 @@
 export function factorial(n: number) {
-  // your code here
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+
+  let factorial = 1;
+  for (let i = 1; i <= n; i++) {
+    factorial *= i;
+  }
+  return factorial;
 }
