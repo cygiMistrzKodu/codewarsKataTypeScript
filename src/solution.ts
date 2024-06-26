@@ -1,3 +1,3 @@
 export function removeChar(str: string): string {
-  // You got this!
+  return str.substring(1,str.length-1);
 }

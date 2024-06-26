@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toBinary = void 0;
-function toBinary(n) {
-    return parseInt(n.toString(2));
+exports.removeChar = void 0;
+function removeChar(str) {
+    return str.substring(1, str.length - 1);
 }
-exports.toBinary = toBinary;
+exports.removeChar = removeChar;
