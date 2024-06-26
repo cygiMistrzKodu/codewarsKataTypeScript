@@ -1,6 +1,3 @@
 export function removeChar(str: string): string {
-  const arr = [...str]
-  arr.pop();
-  arr.shift();
-  return arr.join('')
+ return str.slice(1, -1);
 }
