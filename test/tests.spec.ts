@@ -1,12 +1,11 @@
-import { assert } from "chai";
+import { removeChar } from '../src/solution';
+import { assert } from 'chai';
 
-import { toBinary } from "../src/solution";
-
-describe("Basic tests", () => {
-  it("Testing for fixed tests", () => {
-    assert.strictEqual(toBinary(1), 1);
-    assert.strictEqual(toBinary(2), 10);
-    assert.strictEqual(toBinary(3), 11);
-    assert.strictEqual(toBinary(5), 101);  
+describe('removeChar', () => {
+  it('basic tests', () => {
+    assert.equal(removeChar('eloquent'), 'loquen');
+    assert.equal(removeChar('country'), 'ountr');
+    assert.equal(removeChar('person'), 'erso');
+    assert.equal(removeChar('place'), 'lac');
   });
-})
+});

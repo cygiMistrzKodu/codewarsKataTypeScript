@@ -1,3 +1,3 @@
-export function toBinary(n: number): number {
-  return parseInt(n.toString(2));
+export function removeChar(str: string): string {
+  // You got this!
 }
