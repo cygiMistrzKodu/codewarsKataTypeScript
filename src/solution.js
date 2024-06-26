@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.binaryArrayToNumber = void 0;
-function binaryArrayToNumber(arr) {
-    return parseInt(arr.join(''), 2);
+exports.multiTable = void 0;
+function multiTable(number) {
+    let mutiplicationTabel = "";
+    for (let i = 1; i <= 10; i++) {
+        mutiplicationTabel += i + ' * ' + number + ' = ' + i * number + '\n';
+    }
+    return mutiplicationTabel.trim();
 }
-exports.binaryArrayToNumber = binaryArrayToNumber;
-;
+exports.multiTable = multiTable;
