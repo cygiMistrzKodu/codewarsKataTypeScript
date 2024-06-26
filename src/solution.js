@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.removeChar = void 0;
-function removeChar(str) {
-    return str.slice(1, -1);
-}
-exports.removeChar = removeChar;
+exports.mxdiflg = void 0;
+const mxdiflg = (a1, a2) => {
+    // your code
+    return -1;
+};
+exports.mxdiflg = mxdiflg;
