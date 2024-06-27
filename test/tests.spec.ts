@@ -1,12 +1,17 @@
-// See https://www.chaijs.com for how to use Chai.
-import { assert } from "chai";
-import { checkExam } from "../src/solution";
+import {distinct} from "../src/solution";
+// import the type of assertion library you wish to use (Chai recommended)
+import {expect} from "chai";
 
-describe("Basic tests", () => {
-  it("Should pass basic tests", () => {
-    assert.equal(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]), 6);
-    assert.equal(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]), 7);
-    assert.equal(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
-    assert.equal(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]), 0);
+// TODO: Replace examples and use TDD development by writing your own tests
+
+describe("solution", function(){
+  it("should handle array with one number", () => {
+    expect(distinct([1])).to.eql([1])
+  });
+  it("should handle array with two numbers but no duplicates", () => {
+    expect(distinct([1,2])).to.eql([1,2])
+  });
+  it("should handle array with two numbers and a duplicate", () => {
+    expect(distinct([1,1,2])).to.eql([1,2])
   });
 });
