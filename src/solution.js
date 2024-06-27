@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.distinct = void 0;
-const distinct = (a) => {
-    return Array.from(new Set(a));
-};
-exports.distinct = distinct;
+exports.twoSort = void 0;
+function twoSort(s) {
+    return (s.sort()[0].split("")).join('***');
+}
+exports.twoSort = twoSort;

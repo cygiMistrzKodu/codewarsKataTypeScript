@@ -1,3 +1,3 @@
 export function twoSort(s: string[]): string {
-  return "";
+  return (s.sort()[0].split("")).join('***');
 }
