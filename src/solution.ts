@@ -1,3 +1,4 @@
 export const distinct = (a: number[]): number[] => {
-  return a;
+  return Array.from(new Set(a));
+
 }

@@ -1,13 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// See https://www.chaijs.com for how to use Chai.
-const chai_1 = require("chai");
 const solution_1 = require("../src/solution");
-describe("Basic tests", () => {
-    it("Should pass basic tests", () => {
-        chai_1.assert.equal((0, solution_1.checkExam)(["a", "a", "b", "b"], ["a", "c", "b", "d"]), 6);
-        chai_1.assert.equal((0, solution_1.checkExam)(["a", "a", "c", "b"], ["a", "a", "b", ""]), 7);
-        chai_1.assert.equal((0, solution_1.checkExam)(["a", "a", "b", "c"], ["a", "a", "b", "c"]), 16);
-        chai_1.assert.equal((0, solution_1.checkExam)(["b", "c", "b", "a"], ["", "a", "a", "c"]), 0);
+// import the type of assertion library you wish to use (Chai recommended)
+const chai_1 = require("chai");
+// TODO: Replace examples and use TDD development by writing your own tests
+describe("solution", function () {
+    it("should handle array with one number", () => {
+        (0, chai_1.expect)((0, solution_1.distinct)([1])).to.eql([1]);
+    });
+    it("should handle array with two numbers but no duplicates", () => {
+        (0, chai_1.expect)((0, solution_1.distinct)([1, 2])).to.eql([1, 2]);
+    });
+    it("should handle array with two numbers and a duplicate", () => {
+        (0, chai_1.expect)((0, solution_1.distinct)([1, 1, 2])).to.eql([1, 2]);
     });
 });
