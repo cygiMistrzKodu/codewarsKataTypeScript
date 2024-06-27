@@ -1,17 +1,12 @@
-import {distinct} from "../src/solution";
-// import the type of assertion library you wish to use (Chai recommended)
-import {expect} from "chai";
+import { twoSort } from "../src/solution";
+import {assert} from "chai";
 
-// TODO: Replace examples and use TDD development by writing your own tests
-
-describe("solution", function(){
-  it("should handle array with one number", () => {
-    expect(distinct([1])).to.eql([1])
-  });
-  it("should handle array with two numbers but no duplicates", () => {
-    expect(distinct([1,2])).to.eql([1,2])
-  });
-  it("should handle array with two numbers and a duplicate", () => {
-    expect(distinct([1,1,2])).to.eql([1,2])
+describe("Sort and Star", function(){
+  it("Sample tests", function() {
+    assert.equal(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n');
+    assert.equal(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e');
+    assert.equal(twoSort(["lets", "talk", "about", "javascript", "the", "best", "language"]), 'a***b***o***u***t');
+    assert.equal(twoSort(["i", "want", "to", "travel", "the", "world", "writing", "code", "one", "day"]), 'c***o***d***e');
+    assert.equal(twoSort(["Lets", "all", "go", "on", "holiday", "somewhere", "very", "cold"]), 'L***e***t***s');
   });
 });

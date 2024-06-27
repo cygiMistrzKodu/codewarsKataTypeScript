@@ -1,4 +1,3 @@
-export const distinct = (a: number[]): number[] => {
-  return Array.from(new Set(a));
-
+export function twoSort(s: string[]): string {
+  return "";
 }
