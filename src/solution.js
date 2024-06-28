@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.hoopCount = void 0;
-function hoopCount(n) {
-    if (n >= 10) {
-        return "Great, now move on to tricks";
+exports.findAverage = void 0;
+function findAverage(array) {
+    if (array.length == 0) {
+        return 0;
     }
-    return "Keep at it until you get it";
+    return array.reduce((sum, nextNumber) => sum + nextNumber, 0) / array.length;
 }
-exports.hoopCount = hoopCount;
+exports.findAverage = findAverage;

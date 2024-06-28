@@ -4,5 +4,6 @@ import {assert} from "chai";
 describe("solution", () => {
   it('should calculate avg of given numbers',() => {
     assert.strictEqual(findAverage([1,1,1]), 1);
+    assert.strictEqual(findAverage([]), 0);
   });
 });
