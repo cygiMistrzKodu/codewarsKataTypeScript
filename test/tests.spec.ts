@@ -1,12 +1,9 @@
-import { twoSort } from "../src/solution";
-import {assert} from "chai";
+import { assert } from "chai";
+import { reverseList } from "../src/solution";
 
-describe("Sort and Star", function(){
-  it("Sample tests", function() {
-    assert.equal(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n');
-    assert.equal(twoSort(["turns", "out", "random", "test", "cases", "are", "easier", "than", "writing", "out", "basic", "ones"]), 'a***r***e');
-    assert.equal(twoSort(["lets", "talk", "about", "javascript", "the", "best", "language"]), 'a***b***o***u***t');
-    assert.equal(twoSort(["i", "want", "to", "travel", "the", "world", "writing", "code", "one", "day"]), 'c***o***d***e');
-    assert.equal(twoSort(["Lets", "all", "go", "on", "holiday", "somewhere", "very", "cold"]), 'L***e***t***s');
+describe("reverseList", function(){
+  it("should reverse some sample arrays", function(){
+    assert.deepEqual(reverseList([1,2,3,4]), [4,3,2,1], "Input=[1,2,3,4]");
+    assert.deepEqual(reverseList([3,1,5,4]), [4,5,1,3], "Input=[3,1,5,4]");
   });
 });
