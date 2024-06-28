@@ -1,9 +1,11 @@
 import { assert } from "chai";
-import { reverseList } from "../src/solution";
 
-describe("reverseList", function(){
-  it("should reverse some sample arrays", function(){
-    assert.deepEqual(reverseList([1,2,3,4]), [4,3,2,1], "Input=[1,2,3,4]");
-    assert.deepEqual(reverseList([3,1,5,4]), [4,5,1,3], "Input=[3,1,5,4]");
+import {hoopCount} from "../src/solution";
+
+describe("Keep up the hoop", () => {
+  it("Fixed tests", () => {
+    assert.strictEqual(hoopCount(6), "Keep at it until you get it");
+    assert.strictEqual(hoopCount(10), "Great, now move on to tricks");
+    assert.strictEqual(hoopCount(22), "Great, now move on to tricks");
   });
 });
