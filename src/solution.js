@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.findAverage = void 0;
-function findAverage(array) {
-    if (array.length == 0) {
-        return 0;
+exports.cubeChecker = void 0;
+function cubeChecker(volume, side) {
+    if (volume <= 0 || side <= 0) {
+        return false;
     }
-    return array.reduce((sum, nextNumber) => sum + nextNumber, 0) / array.length;
+    return volume === side * side * side;
 }
-exports.findAverage = findAverage;
+exports.cubeChecker = cubeChecker;

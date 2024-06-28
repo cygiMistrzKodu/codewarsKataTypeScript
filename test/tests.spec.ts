@@ -9,5 +9,7 @@ describe("Cube?", function() {
       assert.isFalse(cubeChecker(0, 35));
       assert.isFalse(cubeChecker(452, 1));
       assert.isFalse(cubeChecker(785, 0));
+      assert.isFalse(cubeChecker(367, -18));
+      assert.isFalse(cubeChecker(0, 0));
   });
 });
