@@ -1,7 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.reverseList = void 0;
-function reverseList(list) {
-    return list.reverse();
+exports.hoopCount = void 0;
+function hoopCount(n) {
+    if (n >= 10) {
+        return "Great, now move on to tricks";
+    }
+    return "Keep at it until you get it";
 }
-exports.reverseList = reverseList;
+exports.hoopCount = hoopCount;
