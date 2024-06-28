@@ -1,10 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cubeChecker = void 0;
-function cubeChecker(volume, side) {
-    if (volume <= 0 || side <= 0) {
-        return false;
+exports.nearestSq = void 0;
+function nearestSq(n) {
+    if (Number.isInteger(Math.sqrt(n))) {
+        return n;
     }
-    return volume === side * side * side;
+    let leftSideSquare = 0;
+    for (let number = n; number > 0; number--) {
+        if (Number.isInteger(Math.sqrt(number))) {
+            leftSideSquare = number;
+            break;
+        }
+    }
+    let squareLeftSideDistance = n - leftSideSquare;
+    let rightSideSquare = 0;
+    for (let number = n;; number++) {
+        if (Number.isInteger(Math.sqrt(number))) {
+            rightSideSquare = number;
+            break;
+        }
+    }
+    let squareRightSideDistance = rightSideSquare - n;
+    return squareLeftSideDistance < squareRightSideDistance ? leftSideSquare : rightSideSquare;
 }
-exports.cubeChecker = cubeChecker;
+exports.nearestSq = nearestSq;
