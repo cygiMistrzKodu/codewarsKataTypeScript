@@ -1,11 +1,8 @@
-import { assert } from "chai";
+import {findAverage} from "../src/solution";
+import {assert} from "chai";
 
-import {hoopCount} from "../src/solution";
-
-describe("Keep up the hoop", () => {
-  it("Fixed tests", () => {
-    assert.strictEqual(hoopCount(6), "Keep at it until you get it");
-    assert.strictEqual(hoopCount(10), "Great, now move on to tricks");
-    assert.strictEqual(hoopCount(22), "Great, now move on to tricks");
+describe("solution", () => {
+  it('should calculate avg of given numbers',() => {
+    assert.strictEqual(findAverage([1,1,1]), 1);
   });
 });
