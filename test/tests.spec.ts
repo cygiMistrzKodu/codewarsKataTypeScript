@@ -1,9 +1,13 @@
-import {findAverage} from "../src/solution";
-import {assert} from "chai";
+import { assert } from "chai";
+import { cubeChecker } from "../src/solution";
 
-describe("solution", () => {
-  it('should calculate avg of given numbers',() => {
-    assert.strictEqual(findAverage([1,1,1]), 1);
-    assert.strictEqual(findAverage([]), 0);
+describe("Cube?", function() {
+  it("Basic tests", function() {
+      assert.isTrue(cubeChecker(1, 1));
+      assert.isTrue(cubeChecker(8, 2));
+      assert.isTrue(cubeChecker(27, 3));
+      assert.isFalse(cubeChecker(0, 35));
+      assert.isFalse(cubeChecker(452, 1));
+      assert.isFalse(cubeChecker(785, 0));
   });
 });
