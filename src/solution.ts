@@ -1,4 +1,3 @@
-export function nearestSq(n: number): number {
-
- return  Math.round(n ** 0.5) ** 2;
+export function sumDigits(n: number): number {
+  return 0;
 }
