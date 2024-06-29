@@ -1,5 +1,5 @@
 export class Kata {
-  static findLongest(array:number[]):number {
-    throw new Error("The method or operation is not implemented.");
+  static findLongest(array: number[]): number {
+    return array.reduce((mostDigits, nextNumber) => mostDigits.toString().length >= nextNumber.toString().length ? mostDigits : nextNumber);
   }
 }
