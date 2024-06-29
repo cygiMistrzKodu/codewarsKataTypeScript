@@ -1,3 +1,4 @@
 export function sumDigits(n: number): number {
-  return 0;
+
+  return Math.abs(n).toString().split('').map(Number).reduce((sum, digit) => sum + digit, 0);
 }
