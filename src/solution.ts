@@ -1,3 +1,4 @@
 export function strCount(str: string, letter: string): number {
-  return 0;
+
+  return (str.match(new RegExp(letter, "g")) || []).length;
 }

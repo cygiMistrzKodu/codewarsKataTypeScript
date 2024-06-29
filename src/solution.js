@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sumDigits = void 0;
-function sumDigits(n) {
-    return Math.abs(n).toString().split('').map(Number).reduce((sum, digit) => sum + digit, 0);
+exports.strCount = void 0;
+function strCount(str, letter) {
+    return (str.match(new RegExp(letter, "g")) || []).length;
 }
-exports.sumDigits = sumDigits;
+exports.strCount = strCount;
