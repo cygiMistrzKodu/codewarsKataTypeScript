@@ -1,4 +1,5 @@
-export function strCount(str: string, letter: string): number {
-
-  return (str.match(new RegExp(letter, "g")) || []).length;
+export class Kata {
+  static findLongest(array:number[]):number {
+    throw new Error("The method or operation is not implemented.");
+  }
 }

@@ -1,12 +1,10 @@
-import { assert } from "chai";
+import {Kata} from '../src/solution';
+import {assert} from "chai";
 
-import { strCount } from "../src/solution";
-
-
-describe("Sample Test Cases", function() {
-  it("Testing for fixed test", () => {
-    assert.strictEqual(strCount('Hello', 'o'), 1);
-    assert.strictEqual(strCount('Hello', 'l'), 2);
-    assert.strictEqual(strCount('',      'z'), 0);
+describe("solution", function() {
+  it("basic tests", function() {
+    assert.strictEqual(Kata.findLongest([1, 10, 100]), 100);
+    assert.strictEqual(Kata.findLongest([9000, 8, 800]), 9000);
+    assert.strictEqual(Kata.findLongest([8, 900, 500]), 900);
   });
 });
