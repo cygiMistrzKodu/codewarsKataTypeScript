@@ -1,5 +1,3 @@
-export class Kata {
-  static findLongest(array: number[]): number {
-    return array.reduce((mostDigits, nextNumber) => mostDigits.toString().length >= nextNumber.toString().length ? mostDigits : nextNumber);
-  }
-}
+export function predictAge(age1: number, age2: number, age3: number, age4: number, age5: number, age6: number, age7: number, age8: number): number {
+  return 0;
+};
