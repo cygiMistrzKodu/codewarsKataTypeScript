@@ -15,6 +15,7 @@ describe("Tests suite", () => {
     assert.strictEqual(helper.pageItemCount(1), 10, "pageItemCount(1)")
     assert.strictEqual(helper.pageItemCount(2), 4, "pageItemCount(2)")
     assert.strictEqual(helper.pageItemCount(3), -1, "pageItemCount(3)")
+    assert.strictEqual(helper.pageItemCount(-2), -1, "pageItemCount(-2)")
 
     assert.strictEqual(helper.pageIndex(40), -1, "pageIndex(40)")
     assert.strictEqual(helper.pageIndex(22), 2, "pageIndex(22)")

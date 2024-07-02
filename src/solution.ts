@@ -1,20 +1,49 @@
 export class PaginationHelper {
-	constructor(collection, itemsPerPage) {
-	// The constructor takes in an array of items and a integer indicating how many
-	// items fit within a single page
-	}
-	itemCount() {
-	// returns the number of items within the entire collection
-	}
-	pageCount() {
-	// returns the number of pages
-	}
-	pageItemCount(pageIndex) {
-	// returns the number of items on the current page. page_index is zero based.
-	// this method should return -1 for pageIndex values that are out of range
-	}
-	pageIndex(itemIndex) {
-	// determines what page an item is on. Zero based indexes
-	// this method should return -1 for itemIndex values that are out of range
-	}
+
+  private items: any[] = [];
+  private itemsInSinglePage = 0;
+
+  constructor(collection: any[], itemsPerPage: number) {
+    this.items = collection;
+    this.itemsInSinglePage = itemsPerPage;
+
+  }
+  itemCount(): number {
+    return this.items.length;
+  }
+  pageCount(): number {
+
+    return Math.ceil(this.itemCount() / this.itemsInSinglePage);
+  }
+  pageItemCount(pageIndex: number): number {
+
+
+    if (pageIndex < 0) {
+      return -1;
+    }
+
+    const firstElementIndexOnPage = pageIndex * this.itemsInSinglePage
+    const elementLeftOnPage = this.itemCount() - firstElementIndexOnPage;
+
+
+    if (elementLeftOnPage >= this.itemsInSinglePage) {
+      return this.itemsInSinglePage;
+    }
+
+    if (elementLeftOnPage > 0 && elementLeftOnPage < this.itemsInSinglePage) {
+
+      return this.items.slice(firstElementIndexOnPage, this.itemCount()).length
+
+    }
+
+    return -1
+  }
+  pageIndex(itemIndex: number) {
+
+    if (itemIndex < 0 || itemIndex >= this.itemCount()) {
+      return -1;
+    }
+
+    return Math.floor(itemIndex / this.itemsInSinglePage)
+  }
 }
